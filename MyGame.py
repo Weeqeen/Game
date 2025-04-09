@@ -19,20 +19,27 @@ def load_image(name, scale_factor):
     return pygame.transform.scale(image,
                                   (int(image.get_width() * scale_factor), int(image.get_height() * scale_factor)))
 
-scale_factor = 0.2
+scale_factor = 0.8
 player_images = {
-    "idle": load_image("Право1.png", scale_factor),
+    "idle": load_image("Стойка.png", scale_factor),
     "right": [
-        load_image("Право1.png", scale_factor),
-        load_image("Право2.png", scale_factor),
+        load_image("Бег1.png", scale_factor),
+        load_image("Бег2.png", scale_factor),
+        load_image("Бег3.png", scale_factor),
+        load_image("Бег4.png", scale_factor),
+        load_image("Бег5.png", scale_factor),
+        load_image("Бег6.png", scale_factor)
     ],
     "left": [
-        pygame.transform.flip(load_image("Право1.png", scale_factor), True, False),
-        pygame.transform.flip(load_image("Право2.png", scale_factor), True, False)
+        pygame.transform.flip(load_image("Бег1.png", scale_factor), True, False),
+        pygame.transform.flip(load_image("Бег2.png", scale_factor), True, False),
+        pygame.transform.flip(load_image("Бег3.png", scale_factor), True, False),
+        pygame.transform.flip(load_image("Бег4.png", scale_factor), True, False),
+        pygame.transform.flip(load_image("Бег5.png", scale_factor), True, False),
+        pygame.transform.flip(load_image("Бег6.png", scale_factor), True, False)
     ],
-    "jump_right": load_image("Право5.png", scale_factor),
-    "jump_left": pygame.transform.flip(load_image("Право5.png", scale_factor), True, False),
-}
+    "jump_right": load_image("Прыжок3.png", scale_factor),
+    "jump_left": pygame.transform.flip(load_image("Прыжок3.png", scale_factor), True, False),
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
