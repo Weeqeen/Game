@@ -7,10 +7,9 @@
 <ul>
   <li style="list-style-type: disc;">Вы можете перемещать персонажа влево/вправо/прыжок/вниз, используя соответствующие клавиши.</li>
   <li style="list-style-type: square;">Можно поставить игру на паузу, испльзуя кнопку "Esc".</li>
-  <li style="list-style-type: square;">.</li>
+  <li style="list-style-type: square;">Можете взаимодействие с окружением: Избегать препятствий  и собирать предметы.</li>
+  <li style="list-style-type: square;">Достижение цели: добраться до конца уровня</li>
 </ul>
-
-
 
 <h2>Запуск игры</h2>
 Для запуска нужно виртуальное окружение: bash python -m venv.venv 
