@@ -131,8 +131,6 @@ def main_menu():
         screen.fill(SKY)
         draw_text('  Главное меню', font, screen, WIDTH // 2 - 100, HEIGHT // 4)
 
-
-        # Кнопки
         draw_button('   Новая игра', font, screen, WIDTH // 2 - 100, HEIGHT // 2, 257, 50, lambda: game_loop(level=1))
 
         draw_button('Покинуть игру', font, screen, WIDTH // 2 - 100, HEIGHT // 2 + 60, 257, 50, pygame.quit)
