@@ -15,5 +15,4 @@
 Для запуска нужно виртуальное окружение: bash python -m venv.venv 
 
 Далее активируйте виртуальное окружение: bash .venv/Scripts/activate 
-
 Установите необходимые библиотеки: bash pip install -r requirements.txt 
