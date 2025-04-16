@@ -8,6 +8,7 @@ PLATFORM_COLOR = (50, 150, 50)
 GREEN_GROUND = (0, 200, 0)
 
 
+
 class Platform(pygame.sprite.Sprite):
     def __init__(self, x, y, width, height):
         pygame.sprite.Sprite.__init__(self)
@@ -19,9 +20,12 @@ class Platform(pygame.sprite.Sprite):
 
 
 class Platform_Ground(Platform):
-    def __init__(self, x, y, width, height):
+    def __init__(self, x, y, width, height, sprite_path):
         super().__init__(x, y, width, height)
-        self.image.fill(GREEN_GROUND)
+        self.image = pygame.image.load(sprite_path)
+        self.image = pygame.transform.scale(self.image, (width, height))
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (x, y)
 
 
 class FinishSprite(pygame.sprite.Sprite):
