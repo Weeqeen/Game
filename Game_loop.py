@@ -7,7 +7,7 @@ pygame.init()
 SKY = (135, 206, 235)
 WIDTH, HEIGHT = 1024, 650
 level = 1
-screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+screen = pygame.display.set_mode((1024, 650))
 
 
 def game_loop(level):
@@ -16,7 +16,7 @@ def game_loop(level):
     all_sprites.add(player)
 
     platforms = pygame.sprite.Group()
-    platform = Platform_Ground(0, HEIGHT + 70, WIDTH, 50)
+    platform = Platform_Ground(0, HEIGHT + 40, WIDTH + 100 , 100, "Sprites\\Grass.png")
     all_sprites.add(platform)
     platforms.add(platform)
 
@@ -74,7 +74,7 @@ def game_loop(level):
         all_sprites.add(platform)
         platforms.add(platform)
 
-    finish_image_path = "C:\\Users\\Илья\\PycharmProjects\\PyGame\\.venv\\Sprites\\finish_image.jpg"
+    finish_image_path = "C:\\Users\\student\\PycharmProjects\\PythonProject5\\.venv\\Sprites\\finish_image.jpg"
     finish_x, finish_y = finish_positions[level]
     finish_sprite = FinishSprite(finish_x, finish_y, finish_image_path)
     all_sprites.add(finish_sprite)
